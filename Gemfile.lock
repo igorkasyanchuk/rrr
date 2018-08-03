@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rrr (1.0)
+    rrr-cli (1.0)
       rake
 
 GEM
@@ -34,7 +34,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   pry
-  rrr!
+  rrr-cli!
   rspec (~> 3.0)
 
 BUNDLED WITH

@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "rrr/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "rrr"
+  spec.name          = "rrr-cli"
   spec.version       = Rrr::VERSION
   spec.authors       = ["Igor Kasyanchuk"]
   spec.email         = ["igorkasyanchuk@gmail.com"]

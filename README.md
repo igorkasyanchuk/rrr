@@ -14,9 +14,11 @@ This works only with rspecs, so it's a required tool.
 
 Install it yourself as:
 
-    $ gem install rrr
+    $ gem install rrr-cli
 
 Add to `.gitignore` - `.rrr`.
+
+Now you can call `rrr` in project folder.
 
 ## Usage
 
