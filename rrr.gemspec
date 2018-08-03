@@ -1,3 +1,4 @@
+# coding: utf-8
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -10,11 +11,11 @@ Gem::Specification.new do |spec|
   spec.email         = ["igorkasyanchuk@gmail.com"]
 
   spec.summary       = %q{Run Recent Rspecs}
-  spec.description   = %q{Run only recently changed specs}
+  spec.description   = %q{Run only recently changed specs in your app.}
   spec.homepage      = "https://github.com/igorkasyanchuk"
   spec.license       = "MIT"
 
-  spec.files = Dir["{lib,spec}/**/*", "Gemfile", "Gemfile.lock", "MIT-LICENSE", "Rakefile", "README.rdoc", "bin/rrr"]
+  spec.files         = Dir["{lib,spec}/**/*", "Gemfile", "Gemfile.lock", "MIT-LICENSE", "Rakefile", "README.rdoc", "bin/rrr"]
 
   spec.executables   = ["rrr"]
   spec.bindir        = "bin"

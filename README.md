@@ -24,6 +24,10 @@ Just call `rrr` in folder of your app.
 
 It will run "rspec" or "rspec (with changed files)" in your local folder.
 
+## Alternatives
+
+There is an alternative with well known `guard`, but not many people are using it and it requires to have running process.
+
 ## TODO
 
 * integrate with spring
