@@ -34,7 +34,7 @@
 
     def run
       if collection.empty?
-        puts "INFO: no changes in specs ... running all specs\nINFO: #{rspec}"
+        puts "INFO: no recent changes in specs ... running all specs\nINFO: #{rspec}"
         command = rspec
       else
         command = "#{rspec} #{collection.join(' ')}"
