@@ -2,15 +2,15 @@
  require "rake"
  require "date"
  require "time"
+ require "pry"
 
  module Rrr
   class Run
-    attr_reader :datetime
+    attr_reader :datetime, :files
 
-    def initialize
-      init
-      touch
-      run
+    def initialize(files)
+      @files = files
+      init && touch && run
     end
 
     def init
@@ -29,23 +29,28 @@
 
     def list
       file_list = FileList.new('spec/**/*_spec.rb')
-      files     = []
-      file_list.each do |file|
-        files << file if File.ctime(file) > datetime
-      end
-      files
+      file_list.select{|file| File.ctime(file) > datetime}
     end
 
     def run
-      files = list
-      if files.empty?
-        puts "rrr: no changes ins specs ... running all specs"
-        command = "rspec"
+      if collection.empty?
+        puts "INFO: no changes in specs ... running all specs\nINFO: #{rspec}"
+        command = rspec
       else
-        command = "rspec #{files.join(' ')}"
+        command = "#{rspec} #{collection.join(' ')}"
+        puts "rrr: #{command}"
       end
-      puts(command)
       system(command)
+    end
+
+    def collection
+      @collection ||= begin
+        files.empty? ? list : files
+      end
+    end
+
+    def rspec
+      "rspec"
     end
   end
 end

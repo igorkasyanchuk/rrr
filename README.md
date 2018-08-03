@@ -1,4 +1,6 @@
-# Rrr (run recent rspecs)
+# rrr (run recent rspecs)
+
+## For people who are tired specifying path to changed spec files.
 
 Sometimes you want to run only recenly changed specs. And you don't want to specify them like:
 
@@ -19,6 +21,13 @@ Add to `.gitignore` - `.rrr`.
 ## Usage
 
 Just call `rrr` in folder of your app.
+
+It will run "rspec" or "rspec (with changed files)" in your local folder.
+
+## TODO
+
+* integrate with spring
+* integrate with rate tests (maybe with `ttt` command)
 
 ## Development
 
